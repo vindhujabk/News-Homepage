@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+:root {
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Soft-red: hsl(5, 85%, 63%);
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Off-white: hsl(36, 100%, 99%);
+    --Very-dark-blue: hsl(240, 100%, 5%)
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: "Inter";
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 0 30px;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+
+}
+
+.links {
+    animation: 1s ease-in .5s SlideInTop;
+}
+
+.links ul {
+    display: flex;
+    gap: 1rem;
+
+}
+
+.links ul li {
+    list-style: none;
+}
+
+.links ul li a {
+    text-decoration: none;
+    color: var(--Dark-grayish-blue);
+    transition: 0.5s color ease;
+}
+
+.menu-btn{
+    display: none;
+}
+
+.links ul li a:hover {
+    color: var(--Soft-red);
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+
+}
+
+.new-articles {
+    background-color: var(--Very-dark-blue);
+    font-family: 'Inter', sans-serif;
+    color: var(--Off-white);
+    padding: 1em;
+}
+
+aside.new-articles {
+    animation: 1s ease-in 0.5s SlideInRight;
+}
+
+.new-articles .article a {
+    text-decoration: none;
+}
+
+.new-articles .article a:hover {
+    color: var(--Soft-orange);
+    transition: 0.5s color ease;
+}
+
+.heading {
+    font-size: 2.5em;
+    margin-top: 7px;
+    color: var(--Soft-orange);
+}
+
+.article {
+    margin: 25px 5px;
+}
+
+.article a {
+    color: var(--Off-white);
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: inline-block;
+
+}
+
+.hero-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+    padding:2rem
+
+}
+
+#image-sm{
+    display: none;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.button {
+    background-color: var(--Soft-red);
+    padding: 1em 1.5em;
+    display: inline-block;
+    margin-top: 1.5em;
+    text-decoration: none;
+    color: var(--Off-white);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    transition: 0.5s background-color ease;
+
+}
+
+.button:hover {
+    background-color: var(--Very-dark-blue);
+    color: #ffff;
+}
+
+.articles {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 4rem 0;
+
+}
+
+.new-article {
+    display: flex;
+    gap: 1rem;
+
+}
+
+.new-article img {
+    max-width: 120px;
+}
+
+.content h2 {
+    color: var(--Grayish-blue);
+    font-size: 2em;
+
+}
+
+.new-article .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.new-article .content .article-heading {
+    text-decoration: none;
+    color: var(--Very-dark-blue);
+}
+
+.new-article .content .article-heading:hover {
+    color: var(--Soft-red);
+}
+
+
+/* smaller devices */
+
+.sidenavbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    width: 200px;
+    height: 100vh;
+    z-index: 999;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+}
+
+.sidenavbar ul li {
+    list-style: none;
+
+}
+
+.sidenavbar ul li {
+    color: var(--Soft-red);
+    padding: 0.8rem;
+}
+
+
+.sidenavbar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.sidenavbar ul li a:hover {
+    color: var(--Soft-red);
+}
+
+
+@media screen and (max-width:800px) {
+    .hero {
+        grid-template-columns: 1fr;
+
+    }
+
+    .articles {
+        flex-direction: column;
+    }
+
+    .hide{
+        display: none;
+    }
+
+    .menu-btn{
+        display: block;
+    }
+
+    #image-lg{
+        display: none;
+    }
+
+    #image-sm{
+        display: block;
+        max-width:700px;
+        max-height: 500px;
+        margin:0 auto;
+        width:100%
+    }
+
+    .hero-text{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+@keyframes SlideInTop {
+
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+}
+
+@keyframes SlideInRight {
+
+    0% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+}

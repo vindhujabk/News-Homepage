@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The best newspage available">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="./styles.css">
+    <title>NewsToday homepage</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="navbar">
+            <img src="./assets/images/logo.svg" alt="Entri news logo" class="logo">
+            <nav class="links">
+                <ul>
+                    <li><a href="#" class="link hide">Home</a></li>
+                    <li><a href="#" class="link hide">New</a></li>
+                    <li><a href="#" class="link hide">Popular</a></li>
+                    <li><a href="#" class="link hide">Trending</a></li>
+                    <li><a href="#" class="link hide">Categories</a></li>
+                    <li onclick=showSidebar()><a href="#"><img src="./assets/images/icon-menu.svg" alt="icon-menu" class="menu-btn"></a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class=" sidenavbar">
+                <ul>
+                    <li onclick=hideSidebar()><a href="#"><img src="./assets/images/icon-menu-close.svg"
+                                alt="icon-menu-close"></a></li>
+                    <li><a href="#" class="link">Home</a></li>
+                    <li><a href="#" class="link">New</a></li>
+                    <li><a href="#" class="link">Popular</a></li>
+                    <li><a href="#" class="link">Trending</a></li>
+                    <li><a href="#" class="link">Categories</a></li>
+
+                </ul>
+            </nav>
+        </header>
+
+        <main class="hero">
+            <section class="hero-description">
+                <img src="./assets/images/image-web-3-desktop.jpg" alt="Entri news hero image" id="image-lg">
+                <img src="./assets/images/image-web-3-mobile.jpg" alt="Entri news hero image" id="image-sm">
+                <div class="hero-text">
+                    <h1>The Bright Future of Web 3.0?</h1>
+                    <div class="call-out">
+                        <p>We dive into the next evolution of the web that claims to put the power of the platforms back
+                            into the
+                            hands of
+                            the people.
+                            But is it really fulfilling its promise?</p>
+                        <a href="#" class="button">Read more</a>
+                    </div>
+                </div>
+            </section>
+            <aside class="new-articles">
+                <h1 class="heading">New</h1>
+                <article class="article">
+                    <a href="#">Hydrogen VS Electric Cars</a>
+                    <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+                </article>
+                <article class="article">
+                    <a href="#">The Downsides of AI Artistry</a>
+                    <p> What are the possible adverse effects of on-demand AI image generation?</p>
+                </article>
+                <article class="article">
+                    <a href="#">Is VC Funding Drying Up?</a>
+                    <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+                </article>
+            </aside>
+        </main>
+
+        <section class="articles">
+
+
+            <article class="new-article">
+                <img src="./assets/images/image-retro-pcs.jpg" alt="retro computing">
+                <div class="content">
+                    <h2>01</h2>
+                    <h3><a href="#" class="article-heading">Reviving Retro PCs</a></h3>
+
+                    <p>What happens when old PCs are given modern upgrades?</p>
+                </div>
+            </article>
+
+            <article class="new-article">
+                <img src="./assets/images/image-top-laptops.jpg" alt="">
+                <div class="content">
+                    <h2>02</h2>
+                    <h3><a href="#" class="article-heading">Top 10 Laptops of 2022</a></h3>
+
+                    <p>Our best picks for various needs and budgets.</p>
+                </div>
+            </article>
+
+            <article class="new-article">
+                <img src="./assets/images/image-gaming-growth.jpg" alt="retro computing">
+                <div class="content">
+                    <h2>03</h2>
+                    <h3><a href="#" class="article-heading">The Growth of Gaming</a></h3>
+                    <p>How the pandemic has sparked fresh opportunities.</p>
+                </div>
+            </article>
+        </section>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
